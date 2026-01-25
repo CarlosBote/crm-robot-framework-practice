@@ -24,7 +24,7 @@ Should be able to add new customer
     #resize browser window for recording
     maximize browser window
 
-    page should contain     Customers Are Priority One!
+    wait until page contains     Customers Are Priority One!
 
     click link              id=SignIn
     page should contain     Login
