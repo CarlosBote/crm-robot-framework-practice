@@ -6,6 +6,7 @@ Library    SeleniumLibrary
 #robot -d results tests/crm.robot
 
 *** Variables ***
+${BROWSER}    chrome
 
 
 *** Test Cases ***
@@ -19,7 +20,7 @@ Should be able to add new customer
 
     #open the browser
     log                     Starting the test case!
-    open browser            https://automationplayground.com/crm/    chrome
+    open browser            https://automationplayground.com/crm/    ${BROWSER}
 
     #resize browser window for recording
     maximize browser window
