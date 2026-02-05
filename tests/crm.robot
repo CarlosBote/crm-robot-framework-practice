@@ -14,16 +14,24 @@ Should be able to add new customer
     [Documentation]         This is some basic info about the test@
     [Tags]                  1006    Smoke   Contacts
 
-    #initialize Selenium
+    Begin web test
+    login
+    add new customer
+    tear down
+
+
+*** Keywords ***
+Begin web test
     set selenium speed      .2s
     set selenium timeout    10s
 
-    #open the browser
     log                     Starting the test case!
-    open browser            https://automationplayground.com/crm/    ${BROWSER}
+    open browser            about:blank   ${BROWSER}
 
-    #resize browser window for recording
     maximize browser window
+
+login
+    go to                   https://automationplayground.com/crm/
 
     wait until page contains     Customers Are Priority One!
 
@@ -35,6 +43,7 @@ Should be able to add new customer
     click button            id=submit-id
     page should contain     Our Happy Customers
 
+add new customer
     click link              id=new-customer
     page should contain     Add Customer
 
@@ -48,7 +57,6 @@ Should be able to add new customer
     click button            Submit
     wait until page contains    Success
 
+tear down
     sleep                   3s
     close browser
-
-*** Keywords ***
