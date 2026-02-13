@@ -1,5 +1,5 @@
 # Robot Framework - core
-robotframework==7.4.1
+robotframework=>7.4.1
 
 # Browser automation for CRM tests (uses SeleniumLibrary)
-robotframework-seleniumlibrary==6.8.0
+robotframework-seleniumlibrary=>6.8.0
