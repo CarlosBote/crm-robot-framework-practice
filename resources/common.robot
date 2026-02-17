@@ -6,6 +6,10 @@ Library             SeleniumLibrary
 ${BROWSER}    chrome
 
 *** Keywords ***
+
+inserting testing data
+    log    I am setting up the testing data
+
 Begin web test
     set selenium speed      .2s
     set selenium timeout    10s
@@ -18,4 +22,9 @@ Begin web test
 tear down
     sleep                   3s
     close browser
+
+cleaning up testing data
+    log    I am cleaning up the testing data
+
+
 
